@@ -1,0 +1,15 @@
+GEt http://localhost:5008/api/productos
+
+###
+GEt http://localhost:5008/api/productos/1
+
+###
+POST  http://localhost:5008/api/productos
+Content-Type: application/json 
+{
+"id": 11,
+"title": "remera",
+"price": 10,
+"description": "remera",
+"category": "xd"
+}

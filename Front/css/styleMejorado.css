@@ -1,0 +1,120 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #3498db;
+    --primary-color-hover: #2980b9;
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --container-bg: #fff;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Head */
+.container-head {
+    
+    text-align: center;
+    background: var(--container-bg);
+    padding: 20px 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.container-head h1 {
+    color: var(--text-color);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.btn-crear, .btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-crear:hover, .btn:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.btn:focus {
+    outline: 2px solid var(--primary-color-hover);
+}
+
+/* General Heading */
+h1 {
+    text-align: center;
+}
+
+/* Card Container */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    row-gap: 2rem;
+    justify-items: center;
+}
+
+/* Card Styles */
+.card {
+    width: 300px;
+    border: 1px solid black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.card-img {
+    width: 70%;
+    object-fit: cover;
+    height: 200px;
+}
+
+.card-desc {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.card-price {
+    font-size: 1.6rem;
+}
+
+.btn {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+    border-radius: 12px;
+}

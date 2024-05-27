@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        form{
+            width: 80%;
+            margin: 50px auto;
+        }
+        .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff; /* Color del texto */
+    background-color: #007bff; /* Color de fondo */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    text-align: center;
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+
+    </style>
+</head>
+<body>
+    <a href="../pages/index.html" class="btn">Volver Atras</a>
+    <h1>Cargar un nuevo producto </h1>
+    <form enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="title">
+        <select name="category">
+            <option value="">Seleccione una categoría</option>
+            <option value="tecnologia">Tecnología</option>
+            <option value="accesorios">Accesorios</option>
+            <option value="ropa">Ropa</option>
+            <option value="hogar">Hogar</option>
+            <option value="deportes">Deportes</option>
+            <option value="libros">Libros</option>
+        </select>
+        <input type="text" name="description"  placeholder="description">
+        <input type="number" name="price"  placeholder="price">
+        <input type="number" name="id"  placeholder="id">
+        <input type="number" name="rate"  placeholder="rate">
+        <input type="number" name="count"  placeholder="count">
+        <input type="file" name="imagenproducto">
+        <button>Cargar producto</button>
+    </form>
+    <script>
+        const form= document.querySelector('form')
+        form.addEventListener('submit',(e)=>{
+        e.preventDefault()
+        let input=e.target
+        // let body={
+        //     title:input.title.value,
+        //     category:input.category.value,
+        //     description:input.description.value,
+        //     price:input.price.value,
+        //     id:input.id.value,
+        //     rating:{
+        //         rate:input.rate.value,
+        //         count:input.count.value,
+        // } 
+        // }
+        let producto = new FormData(form)
+        fetch('http://localhost:5008/api/productos',{
+            method:'POST',
+            body:producto
+            
+        })
+        .then(res=>res.json())
+        .then(data=>console.log(data))
+        .catch(err=>console.log(err))
+        })
+    </script>
+</body>
+</html>

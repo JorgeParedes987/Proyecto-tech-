@@ -1,0 +1,56 @@
+#detailProduct{
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    padding: 1rem;
+
+}
+#detailProduct > div{
+    width: 50%;
+    padding: 1rem;
+}
+.containerImagen
+{
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: space-evenly ;
+    justify-content: center ;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+.containerImagen div{
+    text-align: center ;
+}
+.containerImagen img{
+        width: 200px;
+    
+}
+.containerInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    gap: 2rem ;
+    text-align: center;
+    font-size: 1.7rem;
+}
+.containerInfo button{
+    width: 60%;
+    margin: 0 auto ;
+    padding: 0.7rem;
+    border-radius: 8px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff; /* Color del texto */
+    background-color: #007bff; /* Color de fondo */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    text-align: center;
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
